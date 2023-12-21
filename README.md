@@ -1,0 +1,1 @@
+creating blockus and then once the ai learns the game I want to see what kinds of strategies it uses.
