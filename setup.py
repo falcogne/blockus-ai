@@ -100,7 +100,7 @@ class Setup():
         ]
 
         self.players = [
-            players.FastPlayer(constants.PLAYER_COLORS[0], self.piece_strings, self.b),
+            players.SlowDecisive(constants.PLAYER_COLORS[0], self.piece_strings, self.b),
             players.FastPlayer(constants.PLAYER_COLORS[1], self.piece_strings, self.b),
             players.Player(constants.PLAYER_COLORS[2], self.piece_strings, self.b),
             players.Player(constants.PLAYER_COLORS[3], self.piece_strings, self.b),

@@ -34,6 +34,25 @@ class Board():
                 self.corners.append((r, c))
                 color_i += 1
     
+    def copy(self):
+        new_b = Board(self.size)
+        for row, arr in enumerate(self.board):
+            for col, square_list in enumerate(arr):
+                for sq in square_list:
+                    new_b.board[row][col].append(sq.copy())
+        
+        for item in self.corners:
+            new_b.corners.append(item)
+
+        return new_b
+    
+    def test_move(self, piece, translation):
+        b = self.copy()
+        b.place_piece(piece, translation)
+        return b
+
+
+
     def place_piece(self, piece : piece.Piece, translation : tuple[int, int]):
         for row, arr in enumerate(piece.shape):
             for col, ele in enumerate(arr):

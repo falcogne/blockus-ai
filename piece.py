@@ -117,6 +117,10 @@ class Square():
         return isinstance(__value, Square) and self.type == __value.type and self.color == __value.color
     
 
+    def copy(self):
+        return Square(self.type, self.color)
+
+
     def is_filled(self) -> bool:
         return self.type == constants.FILLED
     
